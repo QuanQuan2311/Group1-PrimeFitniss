@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phiếu đăng ký tham gia chương trình khuyến mãi</title>
+    <link rel="stylesheet" href="b12_phieuDKHM.css" />
+  </head>
+  <body>
+    <form id="formKM" action="b12.php">
+        <h1 style="text-align: center; color: green;">Phiếu đăng ký tham gia chương trình khuyến mãi</h1>
+      <table>
+        <tr>
+          <td><label for="fullname">Họ và Tên</label></td>
+          <td><input type="text" id="fullname" name="fullname" size="50" /></td>
+        </tr>
+        <tr>
+          <td><label for="dchi">Địa chỉ</label></td>
+          <td><input type="text" id="dchi" name="dchi" size="50" /></td>
+        </tr>
+        <tr>
+          <td><label for="dthoai">Điện thoại</label></td>
+          <td>
+            <input type="number" id="dthoai" name="dthoai" size="50" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="gtinh">Giới tính</label></td>
+          <td>
+            <input type="radio" value="Nam" name="gender" /> Nam
+            <input type="radio" value="Nữ" name="gender" /> Nữ
+          </td>
+        </tr>
+        <tr>
+          <td>Nghề nghiệp</td>
+          <td>
+            <select name="ngnghiep" id="ngnghiep">
+              <option value="giaovien">Giáo Viên</option>
+              <option value="hocvien">Học viên</option>
+
+              <option value="Bacsi">Bác Sĩ</option>
+              <option value="Kysu">Kỹ Sư</option>
+              <option value="Casi">Ca sỉ</option>
+              <option value="Cale">Ca lẻ</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Chọn sản phẩm tham gia</td>
+          <td>
+            <select name="spkm" id="spkm" size="4" multiple>
+              <option value="kdr">Kem đánh cẳng chân</option>
+              <option value="bg">Bột xà giặt áo</option>
+              <option value="dgd">Dầu gội đẻ chiên bột xà</option>
+              <option value="st">Sữa người cho dê tắm</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="dudoan">Dự đoán số người tham gia</label></td>
+          <td>
+            <input
+              type="number"
+              id="dudoan"
+              name="dudoan"
+              size="20"
+              value="00000"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center">
+            <button
+              type="button"
+              onclick="submitform()"
+              style="box-shadow: 2px 2px"
+            >
+              Gởi đăng ký
+            </button>
+           
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center; color: red;">
+            <div id="result"></div>
+            </output>
+          </td>
+        </tr>
+      </table>
+
+      <script>
+        function submitform(){
+            document.getElementById("result").innerHTML = "Bạn đã đăng ký thành công!!!"
+        }
+      </script>
+    </form>
+  </body>
+</html>
